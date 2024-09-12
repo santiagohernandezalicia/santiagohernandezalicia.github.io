@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 1: Elementos enteros</title>
+    <script src="./JS/funciones.js"></script>
+</head>
+<body bgcolor=#fff7fd>
+    <p><a href="index.html">Regresar al Menú</a></p>
+    Capture e imprima un arreglo de 10 elementos de tipo entero.
+    El arreglo se debe de imprimir de forma horizontal y vertical. <br>
+    Muestre el índice de cada elemento.
+    La captura de elementos se debe de cancelar al introducir el último elemento.
+    Incluya un boton de reinicio.<br>
+    <p style="display: inline;" id="arreglo">Capture el elemento[0]</p>
+    <input type="text" id="datos">
+    <input type="button" value="Capturar" id="botoncapturar" onclick="capturar()">
+    <input type="button" value="Reiniciar" onclick="reiniciar()">
+    <table border="1">
+        <tr id="renglon">
+        <tr id="renglon2"></tr>
+        </table> <br> <br>
+    <table id="tablaV" border="1"></table>
+</body>
+</html>

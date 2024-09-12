@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 4: Fibonacci</title>
+    <script>
+        function Fibonacci() {
+            var limite = parseInt(document.getElementById("num").value);
+            var resultado = "Resultado: <br>";
+
+            if (!isNaN(limite) && limite > 1) {
+                var fibSequence = [0, 1];
+                for (var i = 2; i < limite; i++) {
+                    fibSequence[i] = fibSequence[i - 1] + fibSequence[i - 2];
+                }
+
+                resultado += fibSequence.join(", ") + "<br>";
+                document.getElementById("out").innerHTML = resultado;
+            } else {
+                document.getElementById("out").innerHTML = 
+                "Verifique el tipo de datos ingresados. <br> El valor debe ser numérico y mayor a 1.";
+            }
+        }
+    </script>
+</head>
+<body bgcolor="#CBCEF9">
+    <p><a href="index.html">Regresar</a></p>
+    Serie o Sucesión de Fibonacci, solicite el límite al usuario.
+    Fibonacci = 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987<br>
+    Limite: <input type="text" id="num" value="20"><br><br>
+    <input type="button" value="GENERAR" onclick="Fibonacci()"><br><br>
+    <p id="out">Resultado:</p>
+</body>
+</html>

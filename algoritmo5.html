@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el valor de π con la serie de Leibniz</title>
+    <script>
+         function calcularPi() {
+            var iteraciones = parseInt(document.getElementById("numIteraciones").value);
+            var resultado = "Resultado: <br>";
+            var pi = 0;
+            var sucesion = "π = 4 (";
+
+            if (!isNaN(iteraciones) && iteraciones > 0) {
+                for (var i = 0; i < iteraciones; i++) {
+                    var signo = (i % 2 === 0) ? 1 : -1;
+                    var termino = signo * (4 / (2 * i + 1));
+                    pi += termino;
+                    
+                    if (i > 0) {
+                        sucesion += (signo === 1 ? " + " : " - ");
+                    }
+                    sucesion += "1/" + (2 * i + 1);
+                }
+
+                sucesion += ")";
+                resultado += sucesion + "<br>";
+                resultado += "π ≈ " + pi + "<br>";
+                document.getElementById("out").innerHTML = resultado;
+            } else {
+                document.getElementById("out").innerHTML = 
+                "Error: Verifique el tipo de datos ingresados. El número de iteraciones debe ser un valor positivo.";
+            }
+        }
+    </script>
+</head>
+<body bgcolor="#FBDBC9">
+    <p><a href="index.html">Regresar</a></p>
+    <p>Calcule el valor de π a partir de la siguiente serie infinita (Método de Gottfried Leibniz):
+    π = 4 (1/1 - 1/3 + 1/5 - 1/7 + 1/9 - ...)<br>
+        Numero de iteraciones: 5<br>
+        π = 4 (1/1 -1 /3 + 1/5 -1/7 + 1/9)<br>
+        π = ¿?<br>
+
+    </p>
+    <p>Ingrese el número de iteraciones:</p>
+    <input type="text" id="numIteraciones" value="5"><br>
+    <input type="button" value="Calcular π" onclick="calcularPi()"><br>
+    <p id="out">Resultado:</p>
+</body>
+</html>
