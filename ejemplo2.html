@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrado Magico</title>
+    <script src="./JS/funcionesCuadrado.js"></script>
+</head>
+<body bgcolor=#E8CDFA>
+
+    <p><a href="index.html">Regresar al Menú</a></p>
+    <h1>Cuadrado magico</h1>
+    Definicion:es una disposición de números enteros en una cuadrícula de orden nxn,
+    donde la suma de los números en cada fila, columna y diagonal principal es la misma.
+    Este número se conoce como número mágico.
+
+    <br> 
+   <p> seleccione el tamaño del Cuadrado:
+    <select id="lados">
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+
+    </select>
+    <input type="button" value="generar" onclick="Generar()">
+    <input type="button" value="calcular" onclick="Calcular()">
+    <input type="button" style="color:rgb(19, 123, 12);" value="Ejemplo de cuadrado" onclick="EjemploCuadrado()">
+    <input type="button" style="color:rgb(32, 66, 177);" value="Ejemplo de cuadrado magico" onclick="EjemploMagico()">
+    <table border="0.5" id="cuadrado" style="border-collapse:collapse;"></table>
+
+    <h1 id="verificar" style="color:crimson;">No es cuadrado magico</h1>
+    <p id="mensaje" style="color:crimson;"></p>
+    
+</p>
+</body>
+</html>
