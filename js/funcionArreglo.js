@@ -68,7 +68,7 @@ for (var i = 0; i < celdas.length; i++) {
 }
 promedio=suma/celdas.length;
 
-//se copia la tabla horizontal para imprimirla ascendente
+//se copia la tabla horizontal para imprimirla ascendente..
 document.getElementById("tablaHorizontal2").innerHTML =document.getElementById("tablaHorizontal").innerHTML;
 document.getElementById("tablaHorizontal2").rows[0].id = "renglonIndice2";
 document.getElementById("tablaHorizontal2").rows[1].id = "renglonDato2";
