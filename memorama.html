@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama</title>
+    <link rel="stylesheet" href="./css/estiloMemorama.css">
+    <script src="./js/funcionesMemorama.js"></script>
+</head>
+<body onload="Revolver();Fondo();">
+    <table id="tabla">
+        <tr>
+            <td><img src="./img/fondo.jpg" id="0" alt="" class="imagen" onclick="Cambiarimagen(this,0)"></td>
+            <td><img src="./img/fondo.jpg" id="1" alt="" class="imagen" onclick="Cambiarimagen(this,1)"></td>
+            <td><img src="./img/fondo.jpg" id="2" alt="" class="imagen" onclick="Cambiarimagen(this,2)"></td>
+            <td><img src="./img/fondo.jpg" id="3" alt="" class="imagen" onclick="Cambiarimagen(this,3)"></td>
+        </tr>
+        <tr>
+            <td><img src="./img/fondo.jpg" id="4" alt="" class="imagen" onclick="Cambiarimagen(this,4)"></td>
+            <td><img src="./img/fondo.jpg" id="5" alt="" class="imagen" onclick="Cambiarimagen(this,5)"></td>
+            <td><img src="./img/fondo.jpg" id="6" alt="" class="imagen" onclick="Cambiarimagen(this,6)"></td>
+            <td><img src="./img/fondo.jpg" id="7" alt="" class="imagen" onclick="Cambiarimagen(this,7)"></td>
+        </tr>
+        <tr>
+            <td><img src="./img/fondo.jpg" id="8" alt="" class="imagen" onclick="Cambiarimagen(this,8)"></td>
+            <td><img src="./img/fondo.jpg" id="9" alt="" class="imagen" onclick="Cambiarimagen(this,9)"></td>
+            <td><img src="./img/fondo.jpg" id="10" alt="" class="imagen" onclick="Cambiarimagen(this,10)"></td>
+            <td><img src="./img/fondo.jpg" id="11" alt="" class="imagen" onclick="Cambiarimagen(this,11)"></td>
+        </tr>
+        <tr>
+            <td><img src="./img/fondo.jpg" id="12" alt="" class="imagen" onclick="Cambiarimagen(this,12)"></td>
+            <td><img src="./img/fondo.jpg" id="13" alt="" class="imagen" onclick="Cambiarimagen(this,13)"></td>
+            <td><img src="./img/fondo.jpg" id="14" alt="" class="imagen" onclick="Cambiarimagen(this,14)"></td>
+            <td><img src="./img/fondo.jpg" id="15" alt="" class="imagen" onclick="Cambiarimagen(this,15)"></td>
+        </tr>
+    </table>
+    <h1 id="contador" style="color: blue;">Pares Encontrados: 0 </h1>
+    <input type="button" value="Reiniciar" onclick="Reiniciar()">
+    <p id="salida"></p>
+</body>
+</html>
