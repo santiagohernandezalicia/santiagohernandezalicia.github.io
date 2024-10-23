@@ -1,1 +1,171 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('R Q=V;R 1h=0;W 1p(12){12.13=V;12.b=Q?"O":"x"c.j("h").g=Q?"1j X":"1j O"Q=!Q;1i()}W 1i(){k(++1h==9){c.j("h").g=`1o`;f()}R a=c.17("16[15 = 14]");k(a[0].b==a[1].b&&a[1].b==a[2].b&&a[0].b!=""){c.j("h").g=`A ${a[0].b}`;f()y d=c.w("v")d.u=`11:K-J(1)::C{t:"";s:r;e:H%;B:0;L:0;N:G;F-E:10;z-q:1;p-o:n}`;c.m.l(d)}D k(a[3].b==a[4].b&&a[4].b==a[5].b&&a[3].b!=""){c.j("h").g=`A ${a[3].b}`;f()y d=c.w("v")d.u=`11:K-J(2)::C{t:"";s:r;e:H%;B:0;L:0;N:G;F-E:10;z-q:1;p-o:n}`;c.m.l(d)}D k(a[6].b==a[7].b&&a[7].b==a[8].b&&a[6].b!=""){c.j("h").g=`A ${a[6].b}`;f()y d=c.w("v")d.u=`11:K-J(3)::C{t:"";s:r;e:H%;B:0;L:0;N:G;F-E:10;z-q:1;p-o:n}`;c.m.l(d)}D k(a[0].b==a[3].b&&a[3].b==a[6].b&&a[0].b!=""){c.j("h").g=`A ${a[0].b}`;f()y d=c.w("v")d.u=`Z:K-J(1)::C{t:"";s:r;e:-I;Y:-I;B:H%;P:G;F-E:M;z-q:1;p-o:n}`;c.m.l(d)}D k(a[1].b==a[4].b&&a[4].b==a[7].b&&a[1].b!=""){c.j("h").g=`A ${a[1].b}`;f();y d=c.w("v")d.u=`Z:K-J(2)::C{t:"";s:r;e:-I;Y:-I;B:H%;P:G;F-E:M;z-q:1;p-o:n}`;c.m.l(d)}D k(a[2].b==a[5].b&&a[5].b==a[8].b&&a[2].b!=""){c.j("h").g=`A ${a[2].b}`;f()y d=c.w("v")d.u=`Z:K-J(3)::C{t:"";s:r;e:-I;Y:-I;B:H%;P:G;F-E:M;z-q:1;p-o:n}`;c.m.l(d)}D k(a[0].b==a[4].b&&a[4].b==a[8].b&&a[0].b!=""){c.j("h").g=`A ${a[0].b}`;f()y d=c.w("v")d.u=`1g::1n{t:"";s:r;e:0;B:0;P:U(T%*1.1f);N:U(T%*1e);1d-e:1c 1b M;S:1a(19);S-18:e B;z-q:1;p-o:n}`;c.m.l(d)}D k(a[2].b==a[4].b&&a[4].b==a[6].b&&a[2].b!=""){c.j("h").g=`A ${a[2].b}`;f()y d=c.w("v")d.u=`1g::C{t:"";s:r;e:0;L:0;P:U(T%*1.1f);N:U(T%*1e);1d-e:1c 1b M;S:1a(-19);S-18:e L;z-q:1;p-o:n}`;c.m.l(d)}}W f(){R a=c.17("16[15=14]");1m(1l i=0;i<a.1k;i++){a[i].13=V}}',62,88,'||||||||||botones|value|document|Style|top|Dall|innerHTML|turno||getElementById|if|appendChild|head|none|events|pointer|index|absolute|position|content|textContent|style|createElement||const||Gana|left|after|else|color|background|10px|50|1px|child|nth|right|crimson|height||width|control|var|transform|100|calc|true|function||bottom|td|darkred|tr|boton|disabled|button|type|input|querySelectorAll|origin|45deg|rotate|solid|5px|border|1414|414|table|intentos|Verificar|Turno|length|let|for|before|Empate|Chturn'.split('|'),0,{}))
+var control = true;
+var intentos = 0;
+function Chturn(boton) {
+    boton.disabled = true;
+    boton.value = control ? "O" : "x"
+    document.getElementById("turno").innerHTML = control ? "Turno X" : "Turno O"
+    control = !control;
+    Verificar();
+}
+function Verificar() {
+    if (++intentos == 9) {
+        document.getElementById("turno").innerHTML = `Empate`;
+        Dall()
+    }
+    var botones = document.querySelectorAll("input[type = button]");
+    if (botones[0].value == botones[1].value && botones[1].value == botones[2].value && botones[0].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[0].value}`;
+        Dall()
+        const Style = document.createElement("style")
+        Style.textContent = `  tr:nth-child(1)::after{
+    content: ""; /*En realidad es un texto al que se le agrega un fondo el vual es la linea*/
+    position: absolute; /* Establece lo que se tomara en cuenta para dibujar la linea*/
+    top: 50%; /*Estable el punto de particion en el renglon para dibujar la linea*/
+    left: 0; /*Establece la longitud de la linea de izquierda a derecha*/
+    right: 0; /*Establece la longitud de la linea de derecha a izquierda*/
+    height: 10px; /* Estable el grosor de la linea*/
+    background-color: darkred; /*Colo de la linea*/
+    z-index: 1; /*Establece la linea por encima de los objetos*/
+    pointer-events: none; /*Para que la linea no intefiera con los botones*/
+}`;
+        document.head.appendChild(Style);
+
+    }
+    else if (botones[3].value == botones[4].value && botones[4].value == botones[5].value && botones[3].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[3].value}`;
+        Dall()
+        const Style = document.createElement("style")
+        Style.textContent = `  tr:nth-child(2)::after{
+    content: ""; /*En realidad es un texto al que se le agrega un fondo el vual es la linea*/
+    position: absolute; /* Establece lo que se tomara en cuenta para dibujar la linea*/
+    top: 50%; /*Estable el punto de particion en el renglon para dibujar la linea*/
+    left: 0; /*Establece la longitud de la linea de izquierda a derecha*/
+    right: 0; /*Establece la longitud de la linea de derecha a izquierda*/
+    height: 10px; /* Estable el grosor de la linea*/
+    background-color: darkred; /*Colo de la linea*/
+    z-index: 1; /*Establece la linea por encima de los objetos*/
+    pointer-events: none; /*Para que la linea no intefiera con los botones*/
+}`;
+        document.head.appendChild(Style);
+
+    }
+    else if (botones[6].value == botones[7].value && botones[7].value == botones[8].value && botones[6].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[6].value}`;
+        Dall()
+        const Style = document.createElement("style")
+        Style.textContent = `  tr:nth-child(3)::after{
+    content: ""; /*En realidad es un texto al que se le agrega un fondo el vual es la linea*/
+    position: absolute; /* Establece lo que se tomara en cuenta para dibujar la linea*/
+    top: 50%; /*Estable el punto de particion en el renglon para dibujar la linea*/
+    left: 0; /*Establece la longitud de la linea de izquierda a derecha*/
+    right: 0; /*Establece la longitud de la linea de derecha a izquierda*/
+    height: 10px; /* Estable el grosor de la linea*/
+    background-color: darkred; /*Colo de la linea*/
+    z-index: 1; /*Establece la linea por encima de los objetos*/
+    pointer-events: none; /*Para que la linea no intefiera con los botones*/
+}`;
+        document.head.appendChild(Style);
+
+    }
+    else if (botones[0].value == botones[3].value && botones[3].value == botones[6].value && botones[0].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[0].value}`;
+        Dall()
+        const Style = document.createElement("style")
+        Style.textContent = `td:nth-child(1)::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 50%;
+    width: 10px;
+    background-color: crimson;
+    z-index: 1;
+    pointer-events: none;
+}`;
+        document.head.appendChild(Style);
+    }
+    else if (botones[1].value == botones[4].value && botones[4].value == botones[7].value && botones[1].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[1].value}`;
+        Dall();
+        const Style = document.createElement("style")
+        Style.textContent = `td:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 50%;
+    width: 10px;
+    background-color: crimson;
+    z-index: 1;
+    pointer-events: none;
+}`;
+        document.head.appendChild(Style);
+
+    }
+    else if (botones[2].value == botones[5].value && botones[5].value == botones[8].value && botones[2].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[2].value}`;
+        Dall()
+        const Style = document.createElement("style")
+        Style.textContent = `td:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 50%;
+    width: 10px;
+    background-color: crimson;
+    z-index: 1;
+    pointer-events: none;
+}`;
+        document.head.appendChild(Style);
+
+    }
+    else if (botones[0].value == botones[4].value && botones[4].value == botones[8].value && botones[0].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[0].value}`;
+        Dall()
+        const Style = document.createElement("style")
+        Style.textContent = ` table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% * 1.414);
+    height: calc(100% * 1414);
+    border-top: 5px solid crimson;
+    transform: rotate(45deg);
+    transform-origin: top left;
+    z-index: 1;
+    pointer-events: none;
+}`;
+        document.head.appendChild(Style);
+
+
+    }
+    else if (botones[2].value == botones[4].value && botones[4].value == botones[6].value && botones[2].value != "") {
+        document.getElementById("turno").innerHTML = `Gana ${botones[2].value}`;
+        Dall()
+        const Style = document.createElement("style")
+        Style.textContent = `table::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% * 1.414);
+    height: calc(100% * 1414);
+    border-top: 5px solid crimson;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    z-index: 1;
+    pointer-events: none;
+}`;
+        document.head.appendChild(Style);
+
+    }
+    
+}
+function Dall() {
+    var botones = document.querySelectorAll("input[type=button]");
+    for (let i = 0; i < botones.length; i++) {
+        botones[i].disabled = true;
+    }
+}
