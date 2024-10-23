@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2efe9;
+    color: #3b3b3b;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2a3d66;
+    color: #fafafa;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+header h2 {
+    font-size: 1.2em;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.introduction, .topics, .examples {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-left: 8px solid #2a3d66;
+}
+
+.introduction p {
+    margin: 0;
+    font-style: italic;
+    color: #555;
+}
+
+.definition {
+    background-color: #e4e8f3;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.definition h2 {
+    margin-top: 0;
+    color: #2a3d66;
+}
+
+.topics h2, .examples h2 {
+    text-align: center;
+    background-color: #2a3d66;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.topics ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics li {
+    margin: 15px 0;
+}
+
+.topics li strong {
+    display: block;
+    font-size: 1.1em;
+    color: #2a3d66;
+}
+
+.topics a {
+    display: block;
+    margin-top: 5px;
+    background-color: #2a3d66;
+    color: #fafafa;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.topics a:hover {
+    background-color: #1b2747;
+}
+
+.nested-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nested-list a {
+    background-color: #f2a654;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nested-list a:hover {
+    background-color: #e88b1a;
+}
+
+.examples ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.examples a {
+    color: #2a3d66;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.examples a:hover {
+    color: #f2a654;
+}
