@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pila</title>
+    <link rel="stylesheet" href="./css/pila.css">
+    <script src="./js/pila.js"></script>
+</head>
+
+<body onload="Aleatorio()">
+    <h1>Pila generica</h1>
+    Desarrolle una aplicacion que muestre un objeto tipo pila, e implemente los metodos Push, Pop, Peek, Clear, Finf,
+    isEmpty<br>
+    <br> Elemento: <input type="text" id="Elemento" onkeyup="CambioTexto()">
+    <input type="button" value="Push()" id="ipush" onclick="Push(); Aleatorio();">
+    <input type="button" value="Pop()" id="iPop" onclick="Pop()">
+    <input type="button" value="Peek()" id="iPeek" onclick="Peek()">
+    <table>
+        <tbody id="tabla"></tbody>
+    </table>
+    <img src="./img/pila.png" alt="Imagen en la pila">
+    <h3 id="mensaje"></h3>
+</body>
+</html>
