@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Expresión Postfija</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="./css/pilaposfija.css">
+    <!-- Enlace al archivo JavaScript -->
+    <script src="./js/pilaposfijaOFUS.js"></script>
+</head>
+<body>
+    <p><a href="index.html">Regresar al Menú</a></p>
+    <h1>Evaluación de expresión postfija</h1>
+    <div>
+        <label for="exp">Expresión:</label>
+        <input type="text" id="exp" value="3 4 * 2 5 + - 4 * 2 /">
+        <input type="button" id="botonEval" value="Evaluar" onclick="Evaluar()">
+        <input type="button" id="botonPaso" value="Paso a paso" onclick="pasoAPaso()">
+        <input type="button" id="botonRein" value="Reiniciar" onclick="Reinicio()">
+    </div>
+    <p id="textResultado">Resultado: </p>
+    <table>
+        <tbody id="tabla"></tbody>
+    </table>
+    <p id="textPaso">Paso:<br></p>
+</body>
+</html>
