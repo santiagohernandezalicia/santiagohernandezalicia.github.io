@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESENCRIPTAR MENSAJES</title>
+    <script src="./js/descencriptarOFUS.js"></script>
+    <link rel="stylesheet" href="./css/desencriptar.css">
+</head> 
+<body onload="load()" bgcolor="ADD8E6">
+    <p><a href="index.html">Regresar al Menú</a></p>
+    <h1>DESENCRIPTAR ALGORITMO DE CAESAR</h1>
+    <p>Encrypted message: </p>
+    <textarea id="EncryptedMessage" rows="20" readonly></textarea><br>
+    <p>Keys:</p>
+    <select id="key1" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="key2" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="key3" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="key4" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="key5" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="key6" disabled>
+        <option value="">--</option>
+    </select>
+
+    <input type="button" value="Clear" onclick="reset()">
+    <input type="file" id="keyFile" accept=".txt">
+    <input type="button" value="Load Key" onclick="document.getElementById(`keyFile`).click()">
+
+    <input type="file" id="encryptedfile" accept=".txt">
+    <input type="button" value="Load encrypted file" onclick="document.getElementById(`encryptedfile`).click()">
+    <input type="button" value="Decoded" onclick="decrypt()">
+    <input type="button" value="Save Decoded message" onclick="saveMessage()">
+
+    <br>
+    <p>Original Message:</p>        
+    <textarea id="originalMessage" rows="20"> </textarea><br>
+</body>
