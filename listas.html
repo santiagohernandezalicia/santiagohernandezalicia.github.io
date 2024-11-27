@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <script src="./js/listasOFUS.js"></script>
+</head>
+<body bgcolor="f9db99">
+    <h1>Lista (funcionan todas las funciones, excepto clear())</h1>
+    Nota: funcionan todas las funciones, excepto clear()<br><br>
+    Elemento:
+    <input type="text" id="Elemento" onkeyup="CambioTexto()">
+    <input type="button" value="push()" id="pushh" onclick="pushhh()">
+    <input type="button" value="pop()" onclick="pop()">
+    <input type="button" value="shift()" onclick="shift()">
+    <input type="button" value="unshift()" id="unshiftt" onclick="unshift()">
+    <input type="button" value="indexOf()" id="indexx" onclick="indexOf()">
+    <input type="button" value="includes()" id="includess" onclick="includes()">
+    <input type="button" value="sort()" onclick="sort()">
+    <input type="button" value="reverse()" onclick="reverse()">
+    
+    <br><br>Posición:
+    <input type="number" name="" id="Posicion" min="0" onkeyup="CambioTexto()">
+    <input type="button" value="insert_at()" id="insertt" onclick="insert_at()">
+    <input type="button" value="clear()" onclick="clear()">
+    <br><br>
+    
+    <table>
+        <tbody id="tabla"></tbody>
+    </table>
+    <h3 id="mensaje"></h3>
+</body>
+</html>
